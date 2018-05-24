@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'faraday'
+gem 'figaro'
+gem 'omniauth-github'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -41,6 +44,13 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'factory_bot_rails'
+  gem 'simplecov'
+end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
