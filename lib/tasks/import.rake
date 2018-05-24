@@ -7,6 +7,5 @@ namespace :import do
   end
 
   def load_parks
-    end
   end
 end
