@@ -7,5 +7,6 @@ namespace :import do
   end
 
   def load_parks
+    ParkSearch.new.parks
   end
 end
