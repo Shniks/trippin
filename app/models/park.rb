@@ -1,26 +1,16 @@
-class Park
-  attr_reader :state, :description, :directions_info, :directions_url,
-              :full_name, :url, :weather_info
+class Park < ApplicationRecord
 
-  def initialize(attrs = {})
-    @state            = attrs[:states]
-    @latlong          = attrs[:latLong]
-    @description      = attrs[:description]
-    @directions_info  = attrs[:directionsInfo]
-    @directions_url   = attrs[:directionsUrl]
-    @full_name        = attrs[:fullName]
-    @url              = attrs[:url]
-    @weather_info     = attrs[:weatherInfo]
+  def self.create_parks(park)
+    create do |new_park|
+      new_park.state            = park[:states]
+      new_park.description      = park[:description]
+      new_park.directions_info  = park[:directionsInfo]
+      new_park.directions_url   = park[:directionsUrl]
+      new_park.full_name        = park[:fullName]
+      new_park.url              = park[:url]
+      new_park.weather_info     = park[:weatherInfo]
+      new_park.latitude         = park[:latLong].split(",")[0][4..-1]
+      new_park.longitude        = park[:latLong].split(",")[1][6..-1]
+    end
   end
-
-  def latitude
-    latlong.split(",")[0][4..-1]
-  end
-
-  def longitude
-    latlong.split(",")[1][6..-1]
-  end
-
-  private
-    attr_reader :latlong
 end

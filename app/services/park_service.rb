@@ -17,7 +17,8 @@ class ParkService
 
     def params
       {
-        api_key: ENV['NPS_API_KEY']
+        api_key:  ENV['NPS_API_KEY'],
+        limit:    1000
       }
     end
 end
