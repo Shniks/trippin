@@ -12,7 +12,7 @@ class ParkService
 
     def get_json(url)
       response = conn.get(url, params)
-      JSON.parse(response.body, symbolize_names: true)
+      JSON.parse(response.body, symbolize_names: true)[:data]
     end
 
     def params

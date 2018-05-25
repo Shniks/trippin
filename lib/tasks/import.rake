@@ -7,6 +7,10 @@ namespace :import do
   end
 
   def load_parks
-    ParkSearch.new.parks
+    parks = ParkSearch.new.raw_parks
+    parks.each do |park|
+      binding.pry
+      Park.new(park)
+    end
   end
 end

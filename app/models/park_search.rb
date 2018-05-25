@@ -1,12 +1,11 @@
 class ParkSearch
-  def parks
-    binding.pry
-    raw_parks.map do |raw_park|
-      Park.new(raw_park)
-    end
-  end
+  # def parks
+  #   raw_parks.map do |raw_park|
+  #     Park.new(raw_park)
+  #   end
+  # end
 
-  private
+  # private
     def raw_parks
       @raw_parks ||= ParkService.new.park_search
     end
