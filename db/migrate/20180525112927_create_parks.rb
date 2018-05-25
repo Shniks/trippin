@@ -4,9 +4,9 @@ class CreateParks < ActiveRecord::Migration[5.1]
       t.string    :state
       t.text      :description
       t.text      :directions_info
-      t.string    :directions_url
+      t.text      :directions_url
       t.string    :full_name
-      t.string    :url
+      t.text      :url
       t.text      :weather_info
       t.string    :latitude
       t.string    :longitude

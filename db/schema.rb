@@ -17,12 +17,12 @@ ActiveRecord::Schema.define(version: 20180525112927) do
 
   create_table "parks", force: :cascade do |t|
     t.string "state"
-    t.string "description"
-    t.string "directions_info"
-    t.string "directions_url"
+    t.text "description"
+    t.text "directions_info"
+    t.text "directions_url"
     t.string "full_name"
-    t.string "url"
-    t.string "weather_info"
+    t.text "url"
+    t.text "weather_info"
     t.string "latitude"
     t.string "longitude"
     t.datetime "created_at", null: false
