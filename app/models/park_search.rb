@@ -1,5 +1,6 @@
 class ParkSearch
   def parks
+    binding.pry
     raw_parks.map do |raw_park|
       Park.new(raw_park)
     end
