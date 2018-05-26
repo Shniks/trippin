@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Park, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it{ is_expected.to validate_presence_of(:latitude) }
+  it{ is_expected.to validate_presence_of(:longitude) }
+  it{ is_expected.to validate_presence_of(:full_name) }
 end
