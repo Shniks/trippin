@@ -5,6 +5,7 @@ RSpec.describe Park, type: :model do
     it{ is_expected.to validate_presence_of(:latitude) }
     it{ is_expected.to validate_presence_of(:longitude) }
     it{ is_expected.to validate_presence_of(:full_name) }
+    it{ is_expected.to validate_presence_of(:url) }
   end
 
   describe 'Class Methods' do
@@ -20,7 +21,7 @@ RSpec.describe Park, type: :model do
                  latLong: 'lat:40.3428, long:-105.6836' }
 
         park = Park.create_parks(info)
-        
+
         expect(park.state).to eq('Colorado')
         expect(park.latitude).to eq('40.3428')
         expect(park.longitude).to eq('-105.6836')
