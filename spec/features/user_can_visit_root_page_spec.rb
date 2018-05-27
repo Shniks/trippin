@@ -1,4 +1,4 @@
-require 'rails helper'
+require 'rails_helper'
 
 describe 'As a User' do
   describe 'When I visit the root page' do
@@ -6,7 +6,7 @@ describe 'As a User' do
       visit root_path
 
       within('.navbar') do
-        expect(page).to have_link('Register')
+        expect(page).to have_link('New User')
         expect(page).to have_link('Login')
       end
     end
