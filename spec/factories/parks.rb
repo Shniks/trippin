@@ -1,13 +1,13 @@
 FactoryBot.define do
   factory :park do
-    state "MyString"
-    description "MyString"
-    directions_info "MyString"
-    directions_url "MyString"
-    full_name "MyString"
-    url "MyString"
-    weather_info "MyString"
-    latitude "MyString"
-    longitude "MyString"
+    state "Colorado"
+    description "Rocky Mountain National Park"
+    directions_info "Go to Boulder and make a left to Estes Park"
+    directions_url "http://awesomerockymountains.com/directions"
+    full_name "Rocky Mountain National Park"
+    url "http://awesomerockymountains.com"
+    weather_info "Partly cloudy with a chance of shower"
+    latitude "40.3428"
+    longitude "-105.6836"
   end
 end

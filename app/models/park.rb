@@ -1,4 +1,5 @@
 class Park < ApplicationRecord
+  validates_presence_of :latitude, :longitude, :full_name, :url
 
   def self.create_parks(park)
     create do |new_park|
