@@ -11,7 +11,7 @@
       <a><%= image_tag 'ideabox1.png', :class => "main-logo"%></a>
       <section class='admin'>
         <%= image_tag 'person-1.png', :class => "admin-logo" %>
-        <%= link_to 'Sign in with Google', search_path, :class => "admin-logo-text" %>
+        <%= link_to 'Sign in with Google', google_login_path, :class => "admin-logo-text" %>
       </section>
     </div>
     <% flash.each do |name, msg| %>
