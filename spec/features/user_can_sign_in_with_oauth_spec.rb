@@ -7,8 +7,8 @@ describe 'As a User' do
 
       expect(page.status_code).to eq(200)
 
-      click_link "Sign in with Google"
-      
+      click_link 'Sign in with Google'
+
       expect(current_path).to eq(search_path)
       expect(page).to have_css('.welcome_profile')
       expect(page).to have_content('Nikhil')
