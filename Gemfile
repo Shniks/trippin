@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'faraday'
 gem 'figaro'
-gem 'omniauth', '~> 1.1.2'
+gem 'omniauth-google-oauth2', '~> 0.4.1'
 gem 'whenever'
 
 group :development, :test do
