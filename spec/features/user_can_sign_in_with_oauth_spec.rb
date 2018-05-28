@@ -16,6 +16,28 @@ describe 'As a User' do
       expect(page).to have_content('Nikhil')
       expect(page).to have_link('Logout')
     end
+
+    scenario 'When I log back in the oauth token gets updated' do
+      stub_omniauth
+
+      visit root_path
+
+      expect(page.status_code).to eq(200)
+      expect(page).to have_link('Sign in with Google')
+
+      click_link 'Sign in with Google'
+
+      expect(current_path).to eq(search_path)
+      expect(page).to have_content('Nikhil')
+      expect(page).to have_link('Logout')
+
+      click_on 'Logout'
+      click_link 'Sign in with Google'
+      
+      expect(current_path).to eq(search_path)
+      expect(page).to have_content('Nikhil')
+      expect(page).to have_link('Logout')
+    end
   end
 end
 
