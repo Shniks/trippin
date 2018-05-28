@@ -38,6 +38,14 @@
   color: #4699ce;
 }
 
+.user_name {
+  font-family: Helvetica;
+  font-weight: lighter;
+  text-decoration: none;
+  color: #4699ce;
+  margin-top: 19px; 
+}
+
 /* Links inside the navbar */
 .navbar a {
   float: left;
