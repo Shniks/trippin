@@ -7,6 +7,7 @@ namespace :import do
   end
 
   def load_parks
+    Park.destroy_all
     parks = ParkSearch.new.raw_parks
     parks.each do |park|
       next if park[:latLong].empty?
