@@ -19,3 +19,16 @@
 
 # Learn more: http://github.com/javan/whenever
 # See documentation on how to run the schedule to update
+
+set :environment, 'production'
+set :output, {:error => "log/production.log", :standard => "log/production.log"}
+
+set :environment, 'development'
+set :output, {:error => "log/development.log", :standard => "log/development.log"}
+
+set :environment, 'test'
+set :output, {:error => "log/test.log", :standard => "log/test.log"}
+
+every 1.day, :at => '1:00 am' do
+  rake "import:all"
+end
