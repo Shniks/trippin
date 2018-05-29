@@ -15,10 +15,14 @@ describe 'As a User' do
             fill_in :street, with: '1777 Wewatta Street'
             fill_in :city, with: 'Denver'
             fill_in :state, with: 'Colorado'
+            fill_in :radius, with: 50
 
             click_on 'Submit'
 
-            expect(current_path).to eq(parks_path)
+            expect(current_path).to eq(locations_path)
+            expect(page).to have_content('Your Current Location: 1777 Wewatta Street, Denver, Colorado')
+            expect(page).to have_content('Latitude: 34')
+            expect(page).to have_content('longitude: -134')
           end
         end
       end

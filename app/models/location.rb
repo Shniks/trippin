@@ -1,6 +1,15 @@
 class Location < ApplicationRecord
-  validates :address, :latitude, :longitude
+  # validates_presence_of :latitude, :longitude, :address
+  attr_accessor     :address, :latitude, :longitude
+  geocoded_by       :address
+  after_validation  :geocode
+  after_validation  :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
 
-  geocoded_by :address
-  after_validation :geocode
+  def input_address(params)
+    "#{params[:street]}, #{params[:city]}, #{params[:state]}"
+  end
+
+  def address
+    input_address(params)
+  end
 end
