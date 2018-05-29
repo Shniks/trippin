@@ -19,10 +19,8 @@ describe 'As a User' do
 
             click_on 'Submit'
 
-            expect(current_path).to eq(locations_path)
+            expect(current_path).to eq(search_path)
             expect(page).to have_content('Your Current Location: 1777 Wewatta Street, Denver, Colorado')
-            expect(page).to have_content('Latitude: 34')
-            expect(page).to have_content('longitude: -134')
           end
         end
       end

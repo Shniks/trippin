@@ -1,5 +1,9 @@
 class Park < ApplicationRecord
   validates_presence_of :latitude, :longitude, :full_name, :url
+  # attr_accessor     :address, :latitude, :longitude
+  # geocoded_by       :input_address
+  # after_validation  :geocode
+  # after_validation  :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
 
   def self.create_parks(park)
     create do |new_park|

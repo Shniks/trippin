@@ -1,10 +1,14 @@
 <h2>Enter a Location...</h2>
-<%= form_tag :locations, method: :get, :class => 'form-inline' do %>
-    <%= text_field_tag :street, "Street", class: "input address" %>
-    <%= text_field_tag :city, "City", class: "input address" %>
-    <%= text_field_tag :state, "State", class: "input address" %>
-    <%= text_field_tag :radius, "Radius (miles)", class: "input address" %>
-  <section>
-    <%= submit_tag "Submit", class: 'btn btn-default btn-md btn-submit' %>
-  </section>
+<% if params[:street].nil? %>
+  <%= form_tag :search, method: :get, :class => 'form-inline' do %>
+      <%= text_field_tag :street, "Street", class: "input address" %>
+      <%= text_field_tag :city, "City", class: "input address" %>
+      <%= text_field_tag :state, "State", class: "input address" %>
+      <%= text_field_tag :radius, "Radius (miles)", class: "input address" %>
+    <section>
+      <%= submit_tag "Submit", class: 'btn btn-default btn-md btn-submit' %>
+    </section>
+  <% end %>
+<% else %>
+  <h4>Your Current Location: <%= "#{params[:street]}, #{params[:city]}, #{params[:state]}" %> <h4>
 <% end %>
