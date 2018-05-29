@@ -12,7 +12,7 @@ describe 'As a User' do
 
             click_link 'Sign in with Google'
 
-            fill_in :street, with: '1777 Wewatta Street'
+            fill_in :street, with: '1897 Wewatta Street'
             fill_in :city, with: 'Denver'
             fill_in :state, with: 'Colorado'
             fill_in :radius, with: 50
@@ -20,7 +20,7 @@ describe 'As a User' do
             click_on 'Submit'
 
             expect(current_path).to eq(search_path)
-            expect(page).to have_content('Your Current Location: 1777 Wewatta Street, Denver, Colorado')
+            expect(page).to have_content('Your Current Location: 1897 Wewatta Street, Denver, Colorado')
           end
         end
       end
