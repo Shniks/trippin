@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
   def index
-    binding.pry
+    # binding.pry
     @location = Location.new
   end
 end
