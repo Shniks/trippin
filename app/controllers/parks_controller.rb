@@ -1,5 +1,6 @@
 class ParksController < ApplicationController
   def index
-    # binding.pry
+    location = Location.new(params)
+    binding.pry
   end
 end
