@@ -1,3 +1,7 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+
 /* Navbar Container */
 .navbar {
   /* overflow: hidden; */
@@ -28,7 +32,8 @@
 .admin-logo {
   height: 24px;
   width: 26px;
-  margin-right: -10px;
+  margin-right: -5px;
+  margin-top: -5px;
 }
 
 .admin-logo-text {
@@ -36,6 +41,16 @@
   font-weight: lighter;
   text-decoration: none;
   color: #4699ce;
+  margin-top: 13px;
+}
+
+.sign-in-text {
+  font-family: Helvetica;
+  font-weight: lighter;
+  text-decoration: none;
+  color: #4699ce;
+  margin-top: -3px;
+  margin-left: 3px;
 }
 
 .user_name {
@@ -43,7 +58,7 @@
   font-weight: lighter;
   text-decoration: none;
   color: #4699ce;
-  margin-top: 19px; 
+  margin-top: 15px;
 }
 
 /* Links inside the navbar */
