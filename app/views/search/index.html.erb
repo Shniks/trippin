@@ -11,4 +11,9 @@
   <% end %>
 <% else %>
   <h4>Your Current Location: <%= "#{params[:street]}, #{params[:city]}, #{params[:state]}" %> <h4>
+    <% @parks.each do |park| %>
+      <p><%= park.full_name %></P>
+      <p><%= park.state %></p>
+      <p><%= park.description %></p>
+    <% end %>
 <% end %>
