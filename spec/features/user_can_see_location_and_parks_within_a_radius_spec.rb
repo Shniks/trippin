@@ -4,24 +4,34 @@ require './spec/fixtures/omniauth/omniauth_mock'
 describe 'As a User' do
   describe 'I log into the app' do
     describe 'And I enter my street, city, state address into the search fields' do
-      describe 'And I select a radius in miles from a dropdown' do
+      describe 'And I enter a radius in miles' do
         describe 'I get redirected to the parks index' do
-          scenario 'I see my location on a map along with the national parks that fall within the specified radius' do
+          scenario 'I can see my location and a list of parks for my search params' do
             VCR.use_cassette('search_parks') do
-            stub_omniauth
+              stub_omniauth
               visit root_path
 
               click_link 'Sign in with Google'
 
-              fill_in :street, with: '1897 Wewatta Street'
+
+              fill_in :street, with: '1777 Wewatta Street'
               fill_in :city, with: 'Denver'
               fill_in :state, with: 'Colorado'
-              fill_in :radius, with: 50
+              fill_in :radius, with: 500
 
               click_on 'Submit'
+              save_and_open_page
 
               expect(current_path).to eq(search_path)
-              expect(page).to have_content('Your Current Location: 1897 Wewatta Street, Denver, Colorado')
+              expect(page).to have_content('Your Current Location: 1777 Wewatta Street, Denver, Colorado')
+              # Need to stub out geocoder
+              # expect(page).to have_content('73 parks found within your selected range.')
+              # expect(page).to have_css('.park', count: 73)
+              # within(first('.park')) do
+              #   expect(page).to have_css('.name')
+              #   expect(page).to have_css('.state')
+              #   expect(page).to have_css('.description')
+              # end
             end
           end
         end
