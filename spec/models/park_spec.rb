@@ -23,8 +23,8 @@ RSpec.describe Park, type: :model do
         park = Park.create_parks(info)
 
         expect(park.state).to eq('Colorado')
-        expect(park.latitude).to eq('40.3428')
-        expect(park.longitude).to eq('-105.6836')
+        expect(park.latitude).to eq(40.3428)
+        expect(park.longitude).to eq(-105.6836)
         expect(park.full_name).to eq('Rocky Mountain National Park')
       end
     end

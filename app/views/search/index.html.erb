@@ -10,5 +10,10 @@
     </section>
   <% end %>
 <% else %>
-  <h4>Your Current Location: <%= "#{params[:street]}, #{params[:city]}, #{params[:state]}" %> <h4>
+  <h4>Your Current Location: <%= "#{params[:street]}, #{params[:city]}, #{params[:state]}" %> </h4>
+    <% @parks.each do |park| %>
+      <p><%= link_to park.full_name, park_path(park) %></P>
+      <p><%= park.state %></p>
+      <p><%= park.description %></p>
+    <% end %>
 <% end %>

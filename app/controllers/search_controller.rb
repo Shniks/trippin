@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   def index
-    # binding.pry
-    check = "#{params[:street]}, #{params[:city]}, #{params[:state]}"
-    # binding.pry
+    unless params[:street].nil?
+      @parks = Park.parks_search(params)
+    end
   end
 end
