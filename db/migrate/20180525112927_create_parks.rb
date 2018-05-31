@@ -8,8 +8,8 @@ class CreateParks < ActiveRecord::Migration[5.1]
       t.string    :full_name
       t.text      :url
       t.text      :weather_info
-      t.string    :latitude
-      t.string    :longitude
+      t.float     :latitude
+      t.float     :longitude
 
       t.timestamps
     end
