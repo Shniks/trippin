@@ -20,7 +20,6 @@ describe 'As a User' do
               fill_in :radius, with: 500
 
               click_on 'Submit'
-              save_and_open_page
 
               expect(current_path).to eq(search_path)
               expect(page).to have_content('Your Current Location: 1777 Wewatta Street, Denver, Colorado')
