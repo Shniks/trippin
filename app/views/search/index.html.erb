@@ -1,5 +1,5 @@
-<h2>Enter a Location...</h2>
 <% if params[:street].nil? %>
+  <h2>Enter a Location...</h2>
   <%= form_tag :search, method: :get, :class => 'form-inline' do %>
       <%= text_field_tag :street, "Street", class: "input address" %>
       <%= text_field_tag :city, "City", class: "input address" %>
