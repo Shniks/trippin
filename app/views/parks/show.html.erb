@@ -1,4 +1,11 @@
-<p>Name: <%= @park.full_name %></p>
+<h3>Name: <%= @park.full_name %></h3>
 <p>State: <%= @park.state %></p>
 <p>Position: <%= @park.latitude %>, <%= @park.longitude %></p>
 <p>Description: <%= @park.description %></p>
+<section class="flickr_images">
+  <% @photos.each do |photo| %>
+    <article>
+      <img class="flickr-images" src="<%= photo.url %>" alt="<%= photo.title %>"/>
+    </article>
+  <% end %>
+</section>
