@@ -12,7 +12,8 @@
       <% if current_user  %>
         <section class="admin">
           <p class='user_name'>Welcome, <%= current_user.first_name %><p>
-          <%= link_to 'Logout', logout_path, method: :delete, :class => 'admin-logo-text' %>
+          <%= link_to 'Search', search_path, :class => 'navbar-text' %>
+          <%= link_to 'Logout', logout_path, method: :delete, :class => 'navbar-text' %>
         </section>
       <% else %>
         <section class='admin'>
