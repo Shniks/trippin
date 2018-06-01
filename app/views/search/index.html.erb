@@ -14,8 +14,7 @@
   <p><%= @parks.length %> parks found within your selected range.</p>
     <% @parks.each do |park| %>
     <div class='park'>
-      <p class='name'><%= link_to park.full_name, park_path(park) %></P>
-      <p class='state'<%= park.state %></p>
+      <p class='name'><%= link_to park.full_name, park_path(park) %>, <%= park.state %></P>
       <p class ='description'><%= park.description %></p>
     </div>
     <% end %>
