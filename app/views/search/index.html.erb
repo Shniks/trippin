@@ -18,4 +18,31 @@
       <p class ='description'><%= park.description %></p>
     </div>
     <% end %>
+    <h3>National Parks Around Your Area</h3>
+
+    <div id="map"></div>
+    <script>
+
+    function initMap() {
+
+      var denver = {lat: 37, lng: -105};
+      var rmnp = {lat: <%= @parks.first.latitude %>, lng: <%= @parks.first.longitude %>}
+      var latLngs = [denver]
+      <% @parks.each do |park| %>
+        latLngs.push({lat: <%= park.latitude %>, lng: <%= park.longitude %>})
+      <% end %>
+
+      var map = new google.maps.Map(
+        document.getElementById('map'), {zoom: 5, center: denver});
+
+      latLngs.forEach(position => {
+        var marker = new google.maps.Marker({position: position, map: map});
+      });
+
+      }
+      </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCojpbx2r_X2ERHTjqS6KS1WWCoTkB5OI0&callback=initMap">
+    </script>
 <% end %>
