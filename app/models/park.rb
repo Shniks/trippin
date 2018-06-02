@@ -16,15 +16,15 @@ class Park < ApplicationRecord
   end
 
   def self.parks_search(params)
-    geocode_address(params)
-  end
+   geocode_address(params)
+ end
 
-  private
-    def self.geocode_address(params)
-      address = "#{params[:street]}, #{params[:city]}, #{params[:state]}"
-      lat = Geocoder.search(address).first.data["geometry"]["location"]["lat"]
-      long = Geocoder.search(address).first.data["geometry"]["location"]["lng"]
-      self.geocoded_by(latitude: lat, longitude:long)
-      Park.near([lat, long], params[:radius])
-    end
+ private
+   def self.geocode_address(params)
+     address = "#{params[:street]}, #{params[:city]}, #{params[:state]}"
+     lat = Geocoder.search(address).first.data["geometry"]["location"]["lat"]
+     long = Geocoder.search(address).first.data["geometry"]["location"]["lng"]
+     self.geocoded_by(latitude: lat, longitude:long)
+     Park.near([lat, long], params[:radius])
+   end
 end

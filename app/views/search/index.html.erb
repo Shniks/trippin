@@ -1,48 +1,9 @@
-<% if params[:street].nil? %>
+
   <h2>Enter a Location...</h2>
-  <%= form_tag :search, method: :get, :class => 'form-inline' do %>
+  <%= form_tag :parks, method: :get, :class => 'form-inline' do %>
       <%= text_field_tag 'street', nil, placeholder: 'Street', class: "input address" %>
       <%= text_field_tag 'city', nil, placeholder: 'City', class: "input address" %>
       <%= text_field_tag 'state', nil, placeholder: 'State', class: "input address" %>
       <%= text_field_tag 'radius', nil, placeholder: 'Radius (miles)', class: "input address" %>
-    <section>
       <%= submit_tag "Submit", class: 'btn btn-default btn-md btn-submit' %>
-    </section>
   <% end %>
-<% else %>
-  <h4>Your Current Location: <%= "#{params[:street]}, #{params[:city]}, #{params[:state]}" %> </h4>
-  <p><%= @parks.length %> parks found within your selected range.</p>
-    <% @parks.each do |park| %>
-    <div class='park'>
-      <p class='name'><%= link_to park.full_name, park_path(park) %>, <%= park.state %></P>
-      <p class ='description'><%= park.description %></p>
-    </div>
-    <% end %>
-    <h3>National Parks Around Your Area</h3>
-
-    <div id="map"></div>
-    <script>
-
-    function initMap() {
-
-      var denver = {lat: 37, lng: -105};
-      var rmnp = {lat: <%= @parks.first.latitude %>, lng: <%= @parks.first.longitude %>}
-      var latLngs = [denver]
-      <% @parks.each do |park| %>
-        latLngs.push({lat: <%= park.latitude %>, lng: <%= park.longitude %>})
-      <% end %>
-
-      var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 5, center: denver});
-
-      latLngs.forEach(position => {
-        var marker = new google.maps.Marker({position: position, map: map});
-      });
-
-      }
-      </script>
-
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCojpbx2r_X2ERHTjqS6KS1WWCoTkB5OI0&callback=initMap">
-    </script>
-<% end %>
