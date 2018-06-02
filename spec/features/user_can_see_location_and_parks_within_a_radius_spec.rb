@@ -21,7 +21,7 @@ describe 'As a User' do
 
               click_on 'Submit'
 
-              expect(current_path).to eq(search_path)
+              expect(current_path).to eq(parks_path)
               expect(page).to have_content('Your Current Location: 1777 Wewatta Street, Denver, Colorado')
               # Need to stub out geocoder
               # expect(page).to have_content('73 parks found within your selected range.')

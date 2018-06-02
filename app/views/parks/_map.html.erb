@@ -6,7 +6,6 @@
 function initMap() {
 
   var denver = {lat: 37, lng: -105};
-  var rmnp = {lat: <%= @parks.first.latitude %>, lng: <%= @parks.first.longitude %>}
   var parks = [denver]
   <% @parks.each do |park| %>
     parks.push({position: {lat: <%= park.latitude %>, lng: <%= park.longitude %>}, info: '<%= link_to park.full_name, park_path(park) %>'})
