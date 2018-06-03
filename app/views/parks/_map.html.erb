@@ -8,7 +8,7 @@
       position: {
         lat: <%= @current_location[:lat] %> ,
         lng: <%= @current_location[:long] %>
-      }, 
+      },
       info: 'Your Location'};
 
     // Create an array of the found parks with their position and information for the info window
@@ -51,5 +51,5 @@
   </script>
 
 <script async defer
-src="https://maps.googleapis.com/maps/api/js?<%= ENV['GOOG_GEO_KEY'] %>&callback=initMap">
+src="https://maps.googleapis.com/maps/api/js?libraries=places&key=<%= ENV['GOOG_GEO_KEY'] %>&callback=initMap">
 </script>
