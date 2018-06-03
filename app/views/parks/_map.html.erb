@@ -32,7 +32,18 @@
     var infoWindow = new google.maps.InfoWindow({
       content: yourLocation.info
     });
+
+    // Close infowindow: Save previously opened infowindow in a variable and then close when new one opens
+    var currWindow =false;
+
     marker.addListener('click', function() {
+      // Put in conditional to see if currwindow (previously opened window) is open. If yes, then close
+      if ( currWindow ) {
+        currWindow.close();
+      }
+
+      // Assign previously opened infowindow to the currwindow variable
+      currWindow = infoWindow;
       infoWindow.open(map, marker);
     });
     // Bounds: Extend the bounds to include the marker's location
@@ -48,6 +59,11 @@
         content: park.info
       });
       marker.addListener('click', function() {
+        if( currWindow ) {
+          currWindow.close();
+        }
+
+        currWindow = infoWindow;
         infoWindow.open(map, marker);
       });
       // Bounds: Extend the bounds to include the marker's location
