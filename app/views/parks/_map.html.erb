@@ -21,6 +21,8 @@
     var map = new google.maps.Map(
       document.getElementById('map'), {zoom: 8, center: yourLocation.position});
 
+    // Bounds: Add a LatLngBounds Object to expand the map so that all the markers fill the map
+    var bounds = new google.maps.LatLngBounds();
     // Pin the market and create and info window for the current location
     var marker = new google.maps.Marker({
       position: yourLocation.position,
@@ -33,6 +35,8 @@
     marker.addListener('click', function() {
       infoWindow.open(map, marker);
     });
+    // Bounds: Extend the bounds to include the marker's location
+    bounds.extend(yourLocation.position)
 
     // Pin the markers and the info windows for each of the found parks
     parks.forEach(park => {
@@ -46,7 +50,11 @@
       marker.addListener('click', function() {
         infoWindow.open(map, marker);
       });
+      // Bounds: Extend the bounds to include the marker's location
+      bounds.extend(park.position)
     });
+    // Bounds: Now update the maps to fit those bounds. This will adjust the zoom automatically
+    map.fitBounds(bounds);
   }
   </script>
 
