@@ -19,12 +19,22 @@ class Park < ApplicationRecord
     geocode_address(params)
   end
 
-  private
-    def self.geocode_address(params)
-      address = "#{params[:street]}, #{params[:city]}, #{params[:state]}"
-      lat = Geocoder.search(address).first.data["geometry"]["location"]["lat"]
-      long = Geocoder.search(address).first.data["geometry"]["location"]["lng"]
-      self.geocoded_by(latitude: lat, longitude:long)
-      Park.near([lat, long], params[:radius])
-    end
+  def self.current_location
+    {lat: @current_lat, long: @current_long}
+  end
+
+private
+  def self.lat(address = "")
+    @current_lat = Geocoder.search(address).first.data["geometry"]["location"]["lat"]
+  end
+
+  def self.long(address = "")
+    @current_long = Geocoder.search(address).first.data["geometry"]["location"]["lng"]
+  end
+
+  def self.geocode_address(params)
+    address = "#{params[:street]}, #{params[:city]}, #{params[:state]}"
+    self.geocoded_by(latitude: lat(address), longitude: long(address))
+    Park.near([lat(address), long(address)], params[:radius])
+  end
 end

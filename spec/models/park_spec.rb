@@ -29,5 +29,4 @@ RSpec.describe Park, type: :model do
       end
     end
   end
-
 end
