@@ -1,7 +1,21 @@
 
-  <h4>Your Current Location: <%= "#{params[:street]}, #{params[:city]}, #{params[:state]}" %> </h4>
+<h4>Your Current Location: <%= "#{params[:street]}, #{params[:city]}, #{params[:state]}" %> </h4>
 
 
-    <%= render partial: 'parks/list' %>
+<%= link_to "Map View", "#", id: "mapView" %>
+<%= link_to "List View", "#", id: "listView" %>
+<div id='gmap'><%= render 'map' %></div>
+<div id='list'><%= render 'list' %></div>
 
-    <%= render partial: 'parks/map' %>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+  $(document).on("click","#mapView",function(){
+    $(#gmap).show();
+    $(#list).hide();
+  });
+
+  $(document).on("click","#listView",function(){
+    $(#list).show();
+    $(#gmap).hide();
+  });
+</script>
