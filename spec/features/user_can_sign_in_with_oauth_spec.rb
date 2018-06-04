@@ -11,7 +11,9 @@ describe 'As a User' do
       expect(page.status_code).to eq(200)
       expect(page).to have_link('Sign in with Google')
 
-      click_link 'Sign in with Google'
+      within('.buy-now-btn') do
+        click_link 'Sign in with Google'
+      end
 
       expect(current_path).to eq(search_path)
       expect(page).to have_content('Nikhil')
@@ -26,14 +28,19 @@ describe 'As a User' do
       expect(page.status_code).to eq(200)
       expect(page).to have_link('Sign in with Google')
 
-      click_link 'Sign in with Google'
+      within('.buy-now-btn') do
+        click_link 'Sign in with Google'
+      end
 
       expect(current_path).to eq(search_path)
       expect(page).to have_content('Nikhil')
       expect(page).to have_link('Logout')
 
       click_on 'Logout'
-      click_link 'Sign in with Google'
+      
+      within('.buy-now-btn') do
+        click_link 'Sign in with Google'
+      end
 
       expect(current_path).to eq(search_path)
       expect(page).to have_content('Nikhil')

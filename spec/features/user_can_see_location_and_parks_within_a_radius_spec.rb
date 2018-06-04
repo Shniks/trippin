@@ -11,8 +11,9 @@ describe 'As a User' do
               stub_omniauth
               visit root_path
 
-              click_link 'Sign in with Google'
-
+              within('.buy-now-btn') do
+                click_link 'Sign in with Google'
+              end
 
               fill_in :street, with: '1777 Wewatta Street'
               fill_in :city, with: 'Denver'
