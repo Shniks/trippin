@@ -201,10 +201,6 @@ body {
   background: black;
   left: 100%
 }
-.slide-3 {
-  background: black;
-  left: 200%
-}
 
 .slider {
   display: flex;
@@ -261,16 +257,6 @@ body {
 }
 
 .slide-2 img {
-  right: 0;
-  width: 100%;
-}
-
-.slide-3 img {
-  right: 0;
-  width: 100%;
-}
-
-.slide-4 img {
   right: 0;
   width: 100%;
 }
@@ -437,13 +423,13 @@ body {
     left: 2%;
   }
 
-  .slider .buy-now-btn {
+  .slider .login-btn {
     padding: 0 15px;
     width: 175px;
     height: 42px;
   }
 
-  .slider .buy-now-btn:after {
+  .slider .login-btn:after {
     top: 15px;
   }
 
