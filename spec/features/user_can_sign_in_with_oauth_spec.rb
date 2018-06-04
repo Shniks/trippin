@@ -11,7 +11,7 @@ describe 'As a User' do
       expect(page.status_code).to eq(200)
       expect(page).to have_link('Sign in with Google')
 
-      within('.buy-now-btn') do
+      within('.login-btn') do
         click_link 'Sign in with Google'
       end
 
@@ -28,7 +28,7 @@ describe 'As a User' do
       expect(page.status_code).to eq(200)
       expect(page).to have_link('Sign in with Google')
 
-      within('.buy-now-btn') do
+      within('.login-btn') do
         click_link 'Sign in with Google'
       end
 
@@ -37,8 +37,8 @@ describe 'As a User' do
       expect(page).to have_link('Logout')
 
       click_on 'Logout'
-      
-      within('.buy-now-btn') do
+
+      within('.login-btn') do
         click_link 'Sign in with Google'
       end
 

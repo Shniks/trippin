@@ -11,7 +11,7 @@ describe 'As a User' do
               stub_omniauth
               visit root_path
 
-              within('.buy-now-btn') do
+              within('.login-btn') do
                 click_link 'Sign in with Google'
               end
 
