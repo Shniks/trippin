@@ -285,21 +285,16 @@ article {
 
 /* Animations */
 .slider h2 {
-  -webkit-transition: opacity 800ms, -webkit-transform 800ms;
-  transition: transform 800ms, opacity 800ms;
-  -webkit-transition-delay: 1s; /* Safari */
-  transition-delay: 1s;
+  -webkit-transition: opacity 1800ms, -webkit-transform 1800ms;
+  transition: transform 1600ms, opacity 1200ms;
+  -webkit-transition-delay: 2s; /* Safari */
+  transition-delay: 2s;
 }
-.slider h4 {
-  -webkit-transition: opacity 800ms, -webkit-transform 800ms;
-  transition: transform 800ms, opacity 800ms;
-  -webkit-transition-delay: 1.4s; /* Safari */
-  transition-delay: 1.4s;
-}
+
 .slider img {
-  -webkit-transition: opacity 800ms, -webkit-transform 800ms;
-  transition: transform 800ms, opacity 800ms;
-  -webkit-transition-delay: 0s; /* Safari */
+  -webkit-transition: opacity 4800ms, -webkit-transform 4800ms;
+  transition: transform 2000ms, opacity 1200ms;
+  -webkit-transition-delay: 2s; /* Safari */
   transition-delay: 0s;
 }
 
@@ -308,7 +303,7 @@ article {
   position: absolute;
   bottom: 30px;
   right: 100px;
-  font-family: 'Oswald';
+  font-family: Helvetica;
   font-weight: bold;
 }
 
