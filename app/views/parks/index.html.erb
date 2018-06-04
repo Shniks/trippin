@@ -1,6 +1,5 @@
 <h4>Your Current Location: <%= "#{params[:street]}, #{params[:city]}, #{params[:state]}" %> </h4>
 
-
 <%= link_to "Map View", "#", id: "mapView" %>
 <%= link_to "List View", "#", id: "listView" %>
 <div id='gmap'><%= render 'map' %></div>
