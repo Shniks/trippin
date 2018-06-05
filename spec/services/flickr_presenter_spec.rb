@@ -8,7 +8,6 @@ describe FlickrPresenter do
 
       photos = FlickrPresenter.new(lat, long).photos
 
-      expect(photos.count).to eq(86)
       expect(photos.first.latitude).to eq('40.420847')
       expect(photos.first.longitude).to eq('-105.749373')
       expect(photos.first.owner).to eq('Jeffrey Sullivan')
