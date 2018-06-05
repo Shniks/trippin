@@ -1,0 +1,46 @@
+<!-- Slideshow -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src='<%= asset_path( 'us1.jpg' )%>' style="width:100%">
+    <div class="text">Tunnel View, Yosemite National Park, California</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src='<%= asset_path( 'us5.jpg' )%>' style="width:100%">
+    <div class="text">Arches National Park, Utah</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src='<%= asset_path( 'us2.jpg' )%>' style="width:100%">
+    <div class="text">Half Dome, Yosemite National Park, California</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src='<%= asset_path( 'us4.jpg' )%>' style="width:100%">
+    <div class="text">Death Valley National Park, California</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src='<%= asset_path( 'us3.jpg' )%>' style="width:100%">
+    <div class="text">Yosemite National Park, California</div>
+  </div>
+
+<!-- JS for the slideshow -->
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 6000); // Change image every 6 seconds
+  }
+</script>
