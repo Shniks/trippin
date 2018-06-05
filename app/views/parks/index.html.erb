@@ -1,22 +1,28 @@
 <%= stylesheet_link_tag 'searchpark', media: 'all' %>
 
-<h4>Your Current Location: <%= "#{params[:street]}, #{params[:city]}, #{params[:state]}" %> </h4>
+<div id='parks-index-title'><h4><strong><span class='radius-word'><%= @parks.length %></span></strong> National Parks found within <strong><span class='radius-word'><%= "#{params[:radius]}" %> Miles</span></strong> of your current location </h4></div>
+<div class='view-buttons'>
+  <div class="w3-bar w3-black">
+    <button class="w3-button" onclick="openView('map')">Map View</button>
+    <button class="w3-button" onclick="openView('list')">List View</button>
+  </div>
+</div>
 
-<button class="btn btn-primary" ><%= link_to "Map View", "#", id: "mapView" %></button>
-<button class="btn btn-primary" ><%= link_to "List View", "#", id: "listView" %></button>
+<div id="map" class="view">
+  <%= render 'map' %>
+</div>
 
-<div id='gmap'><%= render 'map' %></div>
-<div id='list'><%= render 'list' %></div>
+<div id="list" class="view">
+  <%= render 'list' %>
+</div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
-  $(document).on("click","#mapView",function(){
-    $("#gmap").show();
-    $("#list").hide();
-  });
-
-  $(document).on("click","#listView",function(){
-    $("#list").show();
-    $("#gmap").hide();
-  });
+function openView(viewName) {
+  var i;
+  var x = document.getElementsByClassName("view");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  document.getElementById(viewName).style.display = "block";
+}
 </script>
