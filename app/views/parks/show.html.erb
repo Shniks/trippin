@@ -2,7 +2,7 @@
 
 <div id='park-index-title'><h4><%= @park.full_name %>, <%= @park.state %></h4></div>
 <div id='parks-index-subtitle'><h4>Position: <%= @park.latitude %>, <%= @park.longitude %></h4></div>
-<div id='parks-description'><h4><%= @park.description %></h4></div>
+<div id='parks-description'><h4 class='desc-text'><%= @park.description %></h4></div>
 <div class='park-hr'><hr/></div>
 <section class="flickr_images">
   <% @photos.each do |photo| %>

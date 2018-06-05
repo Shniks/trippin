@@ -1,11 +1,11 @@
 <div class='park'>
   <% @parks.each do |park| %>
-  <table class='park-row'>
-    <tr class=park_<%= park.id %>>
-      <tr class='park-name'><%= link_to "#{park.full_name}, #{park.state}", park_path(park) %></tr><br>
-      <tr class ='park-description'><%= park.description %></tr>
+  <div class='park-row'>
+    <p class=park_<%= park.id %>>
+        <p class='park-name'><%= link_to "#{park.full_name}, #{park.state}", park_path(park) %></p><br>
+        <p class ='park-description'><%= park.description %></p>
       <hr/>
-    </tr>
-  </table>
+    </p>
+</div>
   <% end %>
 </div>
