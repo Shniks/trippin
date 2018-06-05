@@ -55,10 +55,14 @@
 .sign-in-text {
   font-family: Helvetica;
   font-weight: lighter;
-  text-decoration: none;
   color: white;
   margin-top: -3px;
   margin-left: -7px;
+}
+
+.sign-in-text:hover {
+  text-decoration: none;
+  color: grey;
 }
 
 .user_name {

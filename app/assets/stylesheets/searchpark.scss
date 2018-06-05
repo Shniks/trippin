@@ -135,12 +135,27 @@ body {
   // color: #e6e6e6;
 }
 
-table.park-row tr.park-name {
-  font-family: Helvetica;
-  font-weight: lighter;
+.park-name {
   font-size: 32px;
+  margin-bottom: -20px;
 }
 
-table.park-row tr.park-description {
+.park-name a {
+  font-family: Helvetica;
+  font-weight: lighter;
+  color: #9c1f15;
+  }
+
+.park-description {
+  font-family: Helvetica;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.desc-text {
+  font-family: Helvetica;
+  font-weight: lighter;
+  letter-spacing: 1px;
   color: white;
 }
