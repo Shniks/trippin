@@ -1,8 +1,11 @@
-<p><%= @parks.length %> parks found within your selected range.</p>
+<div class='park'>
   <% @parks.each do |park| %>
-  <div class='park'>
-    <p class='name'><%= link_to park.full_name, park_path(park) %>, <%= park.state %></P>
-    <p class ='description'><%= park.description %></p>
-  </div>
+  <table class='park-row'>
+    <tr class=park_<%= park.id %>>
+      <tr class='park-name'><%= link_to "#{park.full_name}, #{park.state}", park_path(park) %></tr><br>
+      <tr class ='park-description'><%= park.description %></tr>
+      <hr/>
+    </tr>
+  </table>
   <% end %>
 </div>

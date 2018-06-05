@@ -2,7 +2,7 @@
 
 <% if current_user %>
 <div class='search-box'>
-  <div id='search-title'><h2>Enter a Location...</h2></div>
+  <div id='search-title'><h2>Enter a Location To Find Nearby National Parks</h2></div>
   <%= form_tag :parks, method: :get, :class => 'form' do %>
     <%= text_field_tag 'street', nil, placeholder: 'Street', class: "input address" %>
     <%= text_field_tag 'city', nil, placeholder: 'City', class: "input address" %>
