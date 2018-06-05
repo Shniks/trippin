@@ -16,7 +16,6 @@ describe FlickrService do
 
           photos = FlickrService.new(lat, long).photos_search
 
-          expect(photos.count).to eq(93)
           expect(photos.first).to have_key(:title)
           expect(photos.first).to have_key(:owner)
           expect(photos.first).to have_key(:latitude)
