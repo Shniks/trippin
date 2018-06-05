@@ -9,7 +9,7 @@
 
   <body>
     <div class='navbar'>
-      <h2>Trippin</h2>
+      <a><%= image_tag 'l3.png', :class => "main-logo"%></a>
       <% if current_user  %>
         <section class="admin">
           <p class='user_name'>Welcome, <%= current_user.first_name %><p>

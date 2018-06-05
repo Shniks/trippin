@@ -78,7 +78,16 @@ body {
   font-weight: lighter;
   font-size: 32px;
   margin-top: 35px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+#parks-index-subtitle h4 {
+  color: #e6e6e6;
+  font-family: Helvetica;
+  font-weight: lighter;
+  font-size: 22px;
+  margin-bottom: 36px;
   margin-left: 20px;
 }
 
@@ -90,5 +99,24 @@ body {
 
 .view-buttons {
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.park {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: Helvetica;
+  // font-weight: lighter;
+  // font-size: 20px;
+  // color: #e6e6e6;
+}
+
+table.park-row tr.park-name {
+  font-family: Helvetica;
+  font-weight: lighter;
+  font-size: 32px;
+}
+
+table.park-row tr.park-description {
+  color: white;
 }

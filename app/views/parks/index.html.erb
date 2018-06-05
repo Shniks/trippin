@@ -1,6 +1,7 @@
 <%= stylesheet_link_tag 'searchpark', media: 'all' %>
 
-<div id='parks-index-title'><h4><strong><span class='radius-word'><%= @parks.length %></span></strong> National Parks found within <strong><span class='radius-word'><%= "#{params[:radius]}" %> Miles</span></strong> of your current location </h4></div>
+<div id='parks-index-title'><h4><strong><span class='radius-word'><%= @parks.length %></span></strong> National Parks found within <strong><span class='radius-word'><%= "#{params[:radius]}" %> miles</span></strong> of your current location </h4></div>
+<div id='parks-index-subtitle'><h4>Select a park from the map or list to continue...</h4></div>
 <div class='view-buttons'>
   <div class="w3-bar w3-black">
     <button class="w3-button" onclick="openView('map')">Map View</button>
