@@ -12,7 +12,7 @@ describe FlickrPresenter do
       expect(photos.first.longitude).to eq('-105.749373')
       expect(photos.first.owner).to eq('Jeffrey Sullivan')
       expect(photos.first.title).to eq('Bachelor Party')
-      expect(photos.first.url).to eq('https://farm4.staticflickr.com/3177/2879660342_c7a76b62c7_b.jpg')
+      expect(photos.first.url).to eq('https://farm4.staticflickr.com/3177/2879660342_c7a76b62c7_m.jpg')
     end
   end
 end

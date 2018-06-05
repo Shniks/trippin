@@ -7,7 +7,7 @@ RSpec.describe Photo, type: :model do
                ownername: 'Honeybooboo',
                latitude: '34.3456',
                longitude: '-115.4567',
-               url_l: 'http://awesomerockymountains.com',
+               url_s: 'http://awesomerockymountains.com',
                url_sq: 'http://awesomerockymountains.com/sq'
               }
 
