@@ -1,7 +1,10 @@
+<%= stylesheet_link_tag 'searchpark', media: 'all' %>
+
 <h4>Your Current Location: <%= "#{params[:street]}, #{params[:city]}, #{params[:state]}" %> </h4>
 
-<%= link_to "Map View", "#", id: "mapView" %>
-<%= link_to "List View", "#", id: "listView" %>
+<button class="btn btn-primary" ><%= link_to "Map View", "#", id: "mapView" %></button>
+<button class="btn btn-primary" ><%= link_to "List View", "#", id: "listView" %></button>
+
 <div id='gmap'><%= render 'map' %></div>
 <div id='list'><%= render 'list' %></div>
 

@@ -1,11 +1,17 @@
+<%= stylesheet_link_tag 'searchpark', media: 'all' %>
+
 <% if current_user %>
-<h2>Enter a Location...</h2>
-  <%= form_tag :parks, method: :get, :class => 'form-inline' do %>
-      <%= text_field_tag 'street', nil, placeholder: 'Street', class: "input address" %>
-      <%= text_field_tag 'city', nil, placeholder: 'City', class: "input address" %>
-      <%= text_field_tag 'state', nil, placeholder: 'State', class: "input address" %>
-      <%= text_field_tag 'radius', nil, placeholder: 'Radius (miles)', class: "input address" %>
-      <%= hidden_field_tag :tab, 'map' %>
-      <button class="btn btn-primary" type="submit">Submit</button>
+<div class='search-box'>
+  <div id='search-title'><h2>Enter a Location...</h2></div>
+  <%= form_tag :parks, method: :get, :class => 'form' do %>
+    <%= text_field_tag 'street', nil, placeholder: 'Street', class: "input address" %>
+    <%= text_field_tag 'city', nil, placeholder: 'City', class: "input address" %>
+    <%= text_field_tag 'state', nil, placeholder: 'State', class: "input address" %>
+    <%= text_field_tag 'radius', nil, placeholder: 'Radius (miles)', class: "input address" %>
+    <%= hidden_field_tag :tab, 'map' %>
+    <button class="btn btn-primary" type="submit">Submit</button>
   <% end %>
+</div>
 <% end %>
+
+<%= render 'slideshow' %>
