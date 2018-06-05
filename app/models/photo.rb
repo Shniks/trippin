@@ -5,7 +5,7 @@ class Photo
     @owner      = raw_photo[:ownername]
     @latitude   = raw_photo[:latitude]
     @longitude  = raw_photo[:longitude]
-    @url        = raw_photo[:url_l]
+    @url        = raw_photo[:url_s]
     @url_sq     = raw_photo[:url_sq]
   end
 end
