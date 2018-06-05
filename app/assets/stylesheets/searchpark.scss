@@ -82,6 +82,16 @@ body {
   margin-left: 20px;
 }
 
+#park-index-title h4 {
+  color: maroon;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 32px;
+  margin-top: 35px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
 #parks-index-subtitle h4 {
   color: #e6e6e6;
   font-family: Helvetica;
@@ -89,6 +99,20 @@ body {
   font-size: 22px;
   margin-bottom: 36px;
   margin-left: 20px;
+}
+
+#parks-description h4 {
+  color: #e6e6e6;
+  font-family: Helvetica;
+  font-weight: lighter;
+  font-size: 18px;
+  margin-bottom: 36px;
+  margin-left: 20px;
+}
+
+.park-hr {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .radius-word {

@@ -23,7 +23,8 @@ describe 'As a User' do
               click_on 'Submit'
 
               expect(current_path).to eq(parks_path)
-              expect(page).to have_content('Your Current Location: 1777 Wewatta Street, Denver, Colorado')
+              # expect(page).to have_content('73 National Parks found within 500 miles of your current location')
+              expect(page).to have_content('Select a park from the map or list to continue...')
               # Need to stub out geocoder
               # expect(page).to have_content('73 parks found within your selected range.')
               # expect(page).to have_css('.park', count: 73)
