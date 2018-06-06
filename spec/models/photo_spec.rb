@@ -12,8 +12,6 @@ RSpec.describe Photo, type: :model do
       photo = Photo.new(info)
 
       expect(photo.title).to eq('Awesome Image')
-      expect(photo.latitude).to eq('34.3456')
-      expect(photo.longitude).to eq('-115.4567')
       expect(photo.url).to eq('http://awesomerockymountains.com')
     end
   end
