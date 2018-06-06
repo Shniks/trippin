@@ -15,13 +15,10 @@ describe FlickrService do
         VCR.use_cassette('flickr_data') do
 
           photos = FlickrService.new(lat, long).photos_search
-
+          
           expect(photos.first).to have_key(:title)
           expect(photos.first).to have_key(:owner)
-          expect(photos.first).to have_key(:latitude)
-          expect(photos.first).to have_key(:longitude)
           expect(photos.first).to have_key(:url_s)
-          expect(photos.first).to have_key(:url_sq)
         end
       end
     end
