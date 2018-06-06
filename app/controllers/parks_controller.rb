@@ -3,8 +3,13 @@ class ParksController < ApplicationController
 
   def index
     park_presenter = ParkPresenter.new(params)
-    @parks = park_presenter.parks_search
-    @current_location = park_presenter.current_location
+    @current_location ||= park_presenter.current_location
+    if @current_location[:lat].nil? || @current_location[:lat].nil?
+      flash[:failure] = 'You have entered an invalid address. Please re-enter a valid address.'
+      redirect_to search_path
+    else
+      @parks = park_presenter.parks_search
+    end
   end
 
   def show
