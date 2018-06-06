@@ -13,6 +13,15 @@ class GeocoderService
     end
 
     def current_location_coordinates
-      Geocoder.search(address).first.data["geometry"]["location"]
+      geocoder ||= Geocoder.search(address).first
+      is_address_valid?(geocoder)
+    end
+
+    def is_address_valid?(geocoder)
+      if geocoder.nil?
+        return { lat: 'error', lng: 'error' }
+      else
+        geocoder.data["geometry"]["location"]
+      end
     end
 end
