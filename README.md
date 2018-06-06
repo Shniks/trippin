@@ -2,7 +2,7 @@
 
 ![this](/screenshots/landing_page.png)
 
-'Trippin' is an app that allows users to search for National Parks within a certain radius of an entered location. Users enter the app via Google OAuth, enter a location in the search fields, specify a search radius and hit 'Submit'. They are then taken to a parks index page that shows all the National Parks within their search radius. The list of parks can be viewed either in a map or list format. Users can select a park (either from the list view or by clicking on the url from the popup info window in the map) and are taken to the park's show page where they see some park information along with photos for that park by way of the Flickr API.
+**Trippin** is an app that allows users to search for National Parks within a certain radius of an entered location. Users enter the app via ```Google OAuth```, enter a location in the search fields, specify a search radius and hit ```Submit```. They are then taken to a parks index page that shows all the National Parks within their search radius. The list of parks can be viewed either in a map or list format. Users can select a park (either from the list view or by clicking on the url from the popup info window in the map) and are taken to the park's show page where they see some park information along with photos for that park by way of the Flickr API.
 
 ## Table of Contents
 [Heroku Deployment](#heroku-deployment)  
@@ -48,7 +48,7 @@ To view the app on localhost, start the server by entering the following command
 rails s
 ```
 
-Open up a browser window and then enter the app by clicking on 'Sign in With Google'.
+Open up a browser window and then enter the app by clicking on ```Sign in With Google```.
 ### APIs used
 
 
@@ -60,7 +60,7 @@ The app makes use of the following APIs:
 - Maps Javascript API
 - Flickr API
 
-In order to use the app, create an application.yml file and enter API keys for the above (you might need to register to get these keys). You would also need to register for Google OAuth to allow users to log in via google.
+In order to use the app, create an ```application.yml``` file and enter API keys for the above (you might need to register to get these keys). You would also need to register for Google OAuth to allow users to log in via google.
 
 ### Testing
 
