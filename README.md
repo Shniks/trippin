@@ -73,8 +73,16 @@ rspec
 
 ### Additional Screenshots
 
+**Search Page** 
+
 ![this](/screenshots/search_page.png)
+
+**Parks Index**
+
 ![this](/screenshots/parks_index_map_view.png)
+
+**Park Show**
+
 ![this](/screenshots/park_show_page.png)
 
 ### Author
