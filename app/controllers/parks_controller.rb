@@ -2,8 +2,9 @@ class ParksController < ApplicationController
   before_action :require_login
 
   def index
-    @parks = Park.parks_search(params)
-    @current_location = Park.current_location
+    park_presenter = ParkPresenter.new(params)
+    @parks = park_presenter.parks_search
+    @current_location = park_presenter.current_location
   end
 
   def show
