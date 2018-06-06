@@ -15,7 +15,7 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'simplecov'
 SimpleCov.start "rails" do
-  add_filter 'app/controllers'
+  add_filter 'app/controllers/sessions_controller'
   add_filter 'app/channels'
   add_filter 'app/mailers'
   add_filter 'app/jobs'
