@@ -456,3 +456,16 @@ article {
 #list {
   display: none;
 }
+
+.failure {
+  position: absolute;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: -10px;
+  color: white;
+  background-color: maroon;
+  font-family: Helvetica;
+  font-size: 20px;
+}
