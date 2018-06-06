@@ -73,9 +73,9 @@ rspec
 
 ### Additional Screenshots
 
-**Search Page** 
+**Search Page**
 
-![this](/screenshots/search_page.png)
+![this](/screenshots/search_page_new.png)
 
 **Parks Index**
 
