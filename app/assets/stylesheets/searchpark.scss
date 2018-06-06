@@ -7,6 +7,7 @@ body {
   font-family: Helvetica;
   font-weight: lighter;
   font-size: 41px;
+  margin-top: 40px; 
   margin-bottom: 20px;
 }
 
@@ -159,4 +160,9 @@ body {
   font-weight: lighter;
   letter-spacing: 1px;
   color: white;
+}
+
+.horizontal-line {
+  margin-left: 20px;
+  margin-right: 20px;
 }
