@@ -4,10 +4,10 @@
 <div class='search-box'>
   <div id='search-title'><h2>Enter a Location To Find Nearby National Parks</h2></div>
   <%= form_tag :parks, method: :get, :class => 'form' do %>
-    <%= text_field_tag 'street', nil, placeholder: 'Street', class: "input address" %>
-    <%= text_field_tag 'city', nil, placeholder: 'City', class: "input address" %>
-    <%= text_field_tag 'state', nil, placeholder: 'State', class: "input address" %>
-    <%= text_field_tag 'radius', nil, placeholder: 'Radius (miles)', class: "input address" %>
+    <%= text_field_tag 'street', nil, placeholder: 'Street', class: "input address", :required => true %>
+    <%= text_field_tag 'city', nil, placeholder: 'City', class: "input address", :required => true %>
+    <%= text_field_tag 'state', nil, placeholder: 'State', class: "input address", :required => true %>
+    <%= text_field_tag 'radius', nil, placeholder: 'Radius (miles)', class: "input address", :required => true, type: 'number' %>
     <%= hidden_field_tag :tab, 'map' %>
     <button class="btn btn-primary" type="submit">Submit</button>
   <% end %>
