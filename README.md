@@ -8,7 +8,9 @@
 [Heroku Deployment](#heroku-deployment)  
 [Prerequisites](#prerequisites)  
 [Installation Instructions](#installation-instructions)  
+[APIs Used](#apis-used)  
 [Testing](#testing)  
+[Additional Screenshots](#additional-screenshots)  
 [Author](#author)
 
 ### Heroku deployment
@@ -47,6 +49,18 @@ rails s
 ```
 
 Open up a browser window and then enter the app by clicking on 'Sign in With Google'.
+### APIs used
+
+
+The app makes use of the following APIs:
+
+- National Parks API
+- Google Geocoding API
+- Google+ API
+- Maps Javascript API
+- Flickr API
+
+In order to use the app, create an application.yml file and enter API keys for the above (you might need to register to get these keys). You would also need to register for Google OAuth to allow users to log in via google.
 
 ### Testing
 
@@ -56,6 +70,12 @@ Testing can be initiated by entering the following command in your terminal:
 ```ruby
 rspec
 ```
+
+### Additional Screenshots
+
+![this](/screenshots/search_page.png)
+![this](/screenshots/parks_index_map_view.png)
+![this](/screenshots/park_show_page.png)
 
 ### Author
 
