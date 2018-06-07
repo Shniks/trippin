@@ -1,22 +1,27 @@
 <%= stylesheet_link_tag 'searchpark', media: 'all' %>
 
-<div id='parks-index-title'><h4><strong><span class='radius-word'><%= @parks.length %></span></strong> National Parks found within <strong><span class='radius-word'><%= "#{params[:radius]}" %> miles</span></strong> of your current location </h4></div>
-<div id='parks-index-subtitle'><h4>Select a park from the map or list to continue...</h4></div>
-<div class='view-buttons'>
-  <div class="w3-bar w3-black">
-    <button class="w3-button" onclick="openView('map')">Map View</button>
-    <button class="w3-button" onclick="openView('list')">List View</button>
+<% if @parks.length == 0 %>
+  <div id='parks-index-title'><h4><strong><span class='radius-word'>No</span></strong> National Parks found within <strong><span class='radius-word'><%= "#{params[:radius]}" %> miles</span></strong> of your current location. Please try again.</h4></div>
+  <p class="previous-icon" title="Return to Previous Page"><%= link_to image_tag("goBack.png", height: 35, width: 125), search_path %></p>
+<% else %>
+  <div id='parks-index-title'><h4><strong><span class='radius-word'><%= @parks.length %></span></strong> National Parks found within <strong><span class='radius-word'><%= "#{params[:radius]}" %> miles</span></strong> of your current location </h4></div>
+  <div id='parks-index-subtitle'><h4>Select a park from the map or list to continue...</h4></div>
+  <div class='view-buttons'>
+    <div class="w3-bar w3-black">
+      <button class="w3-button" onclick="openView('map')">Map View</button>
+      <button class="w3-button" onclick="openView('list')">List View</button>
+    </div>
   </div>
-</div>
+<!-- Render View -->
+  <div id="map" class="view">
+    <%= render 'map' %>
+  </div>
+  <div id="list" class="view">
+    <%= render 'list' %>
+  </div>
+<% end %>
 
-<div id="map" class="view">
-  <%= render 'map' %>
-</div>
-
-<div id="list" class="view">
-  <%= render 'list' %>
-</div>
-
+<!-- Javascript -->
 <script>
 function openView(viewName) {
   var i;
