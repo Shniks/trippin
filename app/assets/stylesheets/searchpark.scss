@@ -1,5 +1,5 @@
 body {
-    background-color: #6b6b6b;
+    background-color: #848484;
 }
 
 #search-title h2 {
@@ -87,7 +87,7 @@ body {
 }
 
 #park-index-title h4 {
-  color: maroon;
+  color: #1f1f1f;
   font-family: Helvetica;
   font-weight: bold;
   font-size: 32px;
@@ -121,7 +121,7 @@ body {
 }
 
 .radius-word {
-  color: maroon;
+  color: #1f1f1f;
   font-weight: bold;
   font-size: 36px;
 }
@@ -146,14 +146,15 @@ body {
 }
 
 .park-name a {
-  font-family: Helvetica;
-  font-weight: lighter;
-  color: maroon;
+  font-family: Montserrat;
+  font-weight: bold;
+  color: #1f1f1f;
   }
 
 .park-description {
   font-family: Helvetica;
   font-weight: lighter;
+  font-size: 20px;
   letter-spacing: 1px;
   color: white;
 }
