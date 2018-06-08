@@ -1,6 +1,6 @@
 # Trippin
 
-![this](/screenshots/landing_page.png)
+![this](/screenshots/landing.png)
 
 **Trippin** is an app that allows users to search for National Parks within a certain radius of an entered location. Users enter the app via ```Google OAuth```, enter a location in the search fields, specify a search radius and hit ```Submit```. They are then taken to a parks index page that shows all the National Parks within their search radius. The list of parks can be viewed either in a map or list format. Users can select a park (either from the list view or by clicking on the url from the popup info window in the map) and are taken to the park's show page where they see some park information along with photos for that park by way of the Flickr API.
 
@@ -75,15 +75,15 @@ rspec
 
 **Search Page**
 
-![this](/screenshots/search_page_new.png)
+![this](/screenshots/search.png)
 
 **Parks Index**
 
-![this](/screenshots/parks_index_map_view.png)
+![this](/screenshots/parks_index.png)
 
 **Park Show**
 
-![this](/screenshots/park_show_page.png)
+![this](/screenshots/park_show.png)
 
 ### Author
 
