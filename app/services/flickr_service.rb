@@ -22,7 +22,7 @@ class FlickrService
         method:         "flickr.photos.search",
         api_key:        ENV['FLICKR_KEY'],
         accuracy:       8,
-        per_page:       25,
+        per_page:       500,
         has_geo:        1,
         lat:            "#{@lat}",
         lon:            "#{@long}",
