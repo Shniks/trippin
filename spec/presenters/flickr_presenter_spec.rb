@@ -8,8 +8,8 @@ describe FlickrPresenter do
 
       photos = FlickrPresenter.new(lat, long).photos
 
-      expect(photos.first.title).to eq('Bachelor Party')
-      expect(photos.first.url).to eq('https://farm4.staticflickr.com/3177/2879660342_c7a76b62c7_m.jpg')
+      expect(photos.first.title).to eq('Dream Lake, Colorado')
+      expect(photos.first.url).to eq('https://farm6.staticflickr.com/5510/10528610585_90191a8cbe_m.jpg')
     end
   end
 end
