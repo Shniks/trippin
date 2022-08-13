@@ -315,6 +315,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   active_designer
@@ -348,6 +349,3 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   webmock
   whenever
-
-BUNDLED WITH
-   2.3.20
