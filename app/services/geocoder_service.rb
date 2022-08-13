@@ -21,7 +21,7 @@ class GeocoderService
       if geocoder.nil?
         return { lat: 'error', lng: 'error' }
       else
-        geocoder.data["geometry"]["location"]
+        { "lat" => geocoder.data["lat"], "lng" => geocoder.data["lon"] }
       end
     end
 end
