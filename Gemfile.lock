@@ -44,6 +44,7 @@ GEM
     arel (8.0.0)
     autoprefixer-rails (8.6.0)
       execjs
+    bigdecimal (1.4.2)
     bindex (0.5.0)
     bootstrap (4.1.1)
       autoprefixer-rails (>= 6.0.3)
@@ -252,6 +253,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_designer
+  bigdecimal (= 1.4.2)
   bootstrap (~> 4.1.1)
   byebug
   capybara
