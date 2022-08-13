@@ -19,7 +19,7 @@ Bundler.require(*Rails.groups)
 module Trippin
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.1
+    config.load_defaults 7.0 #updated to 7.0 on August 13, 2022
     # config.assets.initialize_on_precompile = false
 
     # Settings in config/environments/* take precedence over those specified here.
@@ -28,5 +28,6 @@ module Trippin
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.active_record.legacy_connection_handling = false #added on August 13, 2022
   end
 end
