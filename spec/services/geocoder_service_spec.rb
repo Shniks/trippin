@@ -19,8 +19,8 @@ describe GeocoderService do
 
           geocoder = GeocoderService.new(params).coordinates
 
-          expect(geocoder["lat"]).to eq(39.7548947)
-          expect(geocoder["lng"]).to eq(-105.0010102)
+          expect(geocoder["lat"]).to eq("39.75437973469388")
+          expect(geocoder["lng"]).to eq("-105.0012236122449")
         end
       end
     end

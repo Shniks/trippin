@@ -13,8 +13,8 @@ describe ParkService do
         VCR.use_cassette('park_data') do
 
           park = ParkService.new.park_search
-          
-          expect(park.count).to eq(496)
+
+          expect(park.count).to eq(468)
           expect(park.first).to have_key(:states)
           expect(park.first).to have_key(:latLong)
           expect(park.first).to have_key(:description)
