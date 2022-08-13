@@ -29,5 +29,7 @@ module Trippin
     # Don't generate system test files.
     config.generators.system_tests = nil
     config.active_record.legacy_connection_handling = false #added on August 13, 2022
+    config.assets.initialize_on_precompile = false #added on August 13, 2022
+
   end
 end
