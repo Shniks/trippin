@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 7.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -32,13 +32,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'faraday'
 gem 'figaro'
-gem 'omniauth-google-oauth2', '~> 0.4.1'
+gem 'omniauth', '~> 1.9'
+gem 'omniauth-google-oauth2'
 gem 'whenever'
 gem 'geocoder'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'newrelic_rpm'
-gem 'bigdecimal', '1.4.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
