@@ -15,7 +15,7 @@
 
 ### Heroku deployment
 
-The project is hosted on [Heroku](http://nps-search.herokuapp.com/).
+The project is hosted on [Heroku](http://nps-search.herokuapp.com/). Please note that your browser must support SSL encryption (HTTPS) for Google OAuth to function. As such Chrome is recommended when trying out this app on Heroku. 
 
 ### Prerequisites
 
